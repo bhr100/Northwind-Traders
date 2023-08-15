@@ -443,7 +443,7 @@ app.layout = dbc.Container(
                                                                               dmc.Col([
                                                                                         dcc.Markdown('__Select Groupby Columns__'),
                                                                                         dcc.Dropdown(
-                                                                                            options=[{'label': col.replace("_"," ") if "_" in col else col  , 'value': col} for col in ['companyName_customers', 'contactName','contactTitle', 'city_customer', 'country_customer','categoryName',
+                                                                                            options=[{'label': html.Span(col.replace("_"," ") if "_" in col else col ,style={'color':'black'} ), 'value': col} for col in ['companyName_customers', 'contactName','contactTitle', 'city_customer', 'country_customer','categoryName',
                                                                                                                                                                                         'productName','employeeName', 'title','city_employees', 'country_employees']],
                                                                                             id='groupby_columns',
                                                                                             value='contactName',
@@ -452,7 +452,7 @@ app.layout = dbc.Container(
                                                                               dmc.Col([
                                                                                         dcc.Markdown('__Select X Column__'),
                                                                                         dcc.Dropdown(
-                                                                                            options=[{'label': col.replace("_"," ") if "_" in col else col  , 'value': col} for col in ['Total_Sales', 'Total_Orders', 'Total_quantity','Average_Sales', 'Total_Transaction','Average_Orders','life_value_day' ,
+                                                                                            options=[{'label': html.Span(col.replace("_"," ") if "_" in col else col ,style={'color':'black'}) , 'value': col} for col in ['Total_Sales', 'Total_Orders', 'Total_quantity','Average_Sales', 'Total_Transaction','Average_Orders','life_value_day' ,
                                                                                                                                                                                          'life_from_last_order', 'Total_Customer','Total_Products', 'Total_discontinued_orders']],
                                                                                             id='x_column',
                                                                                             value='Total_Sales',
@@ -461,7 +461,7 @@ app.layout = dbc.Container(
                                                                                dmc.Col([
                                                                                         dcc.Markdown('__Select Y Column__'),
                                                                                         dcc.Dropdown(
-                                                                                            options=[{'label': col.replace("_"," ") if "_" in col else col  , 'value': col} for col in ['Total_Sales', 'Total_Orders', 'Total_quantity','Average_Sales', 'Total_Transaction','Average_Orders','life_value_day' ,
+                                                                                            options=[{'label': html.Span(col.replace("_"," ") if "_" in col else col ,style={'color':'black'}) , 'value': col} for col in ['Total_Sales', 'Total_Orders', 'Total_quantity','Average_Sales', 'Total_Transaction','Average_Orders','life_value_day' ,
                                                                                                                                                                                          'life_from_last_order', 'Total_Customer','Total_Products', 'Total_discontinued_orders']],
                                                                                             id='y_column',
                                                                                             value='Total_Orders',
@@ -470,7 +470,7 @@ app.layout = dbc.Container(
                                                                                dmc.Col([
                                                                                         dcc.Markdown('__Select Color Column__'),
                                                                                         dcc.Dropdown(
-                                                                                            options=[{'label': col.replace("_"," ") if "_" in col else col  , 'value': col} for col in ['Average_Sales_Per_Order', 'Average_Sales_Per_Customer','Average_Sales_Per_Product', 'Average_Orders_Per_Customer','Average_Orders_Per_Product', 
+                                                                                            options=[{'label': html.Span(col.replace("_"," ") if "_" in col else col ,style={'color':'black'})  , 'value': col} for col in ['Average_Sales_Per_Order', 'Average_Sales_Per_Customer','Average_Sales_Per_Product', 'Average_Orders_Per_Customer','Average_Orders_Per_Product', 
                                                                                                                                                                                         'Average_Sales_Per_Day','Average_Order_Per_Day', 'Average_Customer_Per_Day','Average_Product_Per_Day', 'Average_Sales_Per_Month','Average_Order_Per_Month',
                                                                                                                                                                                           'Average_Customer_Per_Month','Average_Product_Per_Month', 'Average_Sales_Per_Week','Average_Order_Per_Week', 'Average_Customer_Per_Week','Average_Product_Per_Week',
                                                                                                                                                                                             'Average_Sales_Per_Quarter','Average_Order_Per_Quarter', 'Average_Customer_Per_Quarter','Average_Product_Per_Quarter']],
@@ -481,7 +481,7 @@ app.layout = dbc.Container(
                                                                                 dmc.Col([
                                                                                         dcc.Markdown('__Select Size Column__'),
                                                                                         dcc.Dropdown(
-                                                                                            options=[{'label': col.replace("_"," ") if "_" in col else col  , 'value': col} for col in ['Average_Sales_Per_Order', 'Average_Sales_Per_Customer','Average_Sales_Per_Product', 'Average_Orders_Per_Customer','Average_Orders_Per_Product', 
+                                                                                            options=[{'label': html.Span(col.replace("_"," ") if "_" in col else col ,style={'color':'black'}), 'value': col} for col in ['Average_Sales_Per_Order', 'Average_Sales_Per_Customer','Average_Sales_Per_Product', 'Average_Orders_Per_Customer','Average_Orders_Per_Product', 
                                                                                                                                                                                         'Average_Sales_Per_Day','Average_Order_Per_Day', 'Average_Customer_Per_Day','Average_Product_Per_Day', 'Average_Sales_Per_Month','Average_Order_Per_Month',
                                                                                                                                                                                           'Average_Customer_Per_Month','Average_Product_Per_Month', 'Average_Sales_Per_Week','Average_Order_Per_Week', 'Average_Customer_Per_Week','Average_Product_Per_Week',
                                                                                                                                                                                             'Average_Sales_Per_Quarter','Average_Order_Per_Quarter', 'Average_Customer_Per_Quarter','Average_Product_Per_Quarter']],
